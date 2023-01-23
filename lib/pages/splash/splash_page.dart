@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:first_online_shopping_app/data/controller/popular_product_controller.dart';
-import 'package:first_online_shopping_app/data/controller/recommended_product_controller.dart';
+import 'package:first_online_shopping_app/controller/popular_product_controller.dart';
+import 'package:first_online_shopping_app/controller/recommended_product_controller.dart';
 import 'package:first_online_shopping_app/routes/route_helper.dart';
 import 'package:first_online_shopping_app/utils/dimensions.dart';
 import 'package:flutter/material.dart';
@@ -47,12 +47,18 @@ class _SplashScreenState extends State<SplashScreen>
             scale: animation,
             child: Center(
               child: Image.asset(
-                'assets/images/flower7.jfif',
+                'assets/images/logo part 1.png',
                 width: Dimensions.splashImg,
                 fit: BoxFit.cover,
               ),
             ),
           ),
+          // logo part 2.png
+          Image.asset(
+            'assets/images/logo part 2.png',
+            width: Dimensions.splashImg,
+            fit: BoxFit.cover,
+          )
         ],
       ),
     );

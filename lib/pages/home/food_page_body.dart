@@ -1,6 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:first_online_shopping_app/data/controller/popular_product_controller.dart';
-import 'package:first_online_shopping_app/data/controller/recommended_product_controller.dart';
+import 'package:first_online_shopping_app/controller/popular_product_controller.dart';
+import 'package:first_online_shopping_app/controller/recommended_product_controller.dart';
 import 'package:first_online_shopping_app/model/products_model.dart';
 import 'package:first_online_shopping_app/pages/food/popular_food_detail.dart';
 import 'package:first_online_shopping_app/routes/route_helper.dart';

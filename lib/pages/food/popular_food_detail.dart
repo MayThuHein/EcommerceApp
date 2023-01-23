@@ -1,5 +1,5 @@
-import 'package:first_online_shopping_app/data/controller/cart_controller.dart';
-import 'package:first_online_shopping_app/data/controller/popular_product_controller.dart';
+import 'package:first_online_shopping_app/controller/cart_controller.dart';
+import 'package:first_online_shopping_app/controller/popular_product_controller.dart';
 import 'package:first_online_shopping_app/pages/cart/cart_page.dart';
 import 'package:first_online_shopping_app/pages/home/main_food_page.dart';
 import 'package:first_online_shopping_app/routes/route_helper.dart';

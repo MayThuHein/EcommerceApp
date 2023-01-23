@@ -1,3 +1,5 @@
+import 'package:first_online_shopping_app/account/account_page.dart';
+import 'package:first_online_shopping_app/pages/cart/cart_history.dart';
 import 'package:first_online_shopping_app/pages/home/main_food_page.dart';
 import 'package:first_online_shopping_app/utils/colors.dart';
 import 'package:flutter/material.dart';
@@ -19,16 +21,8 @@ class _HomePageState extends State<HomePage> {
         child: Text("Next Page"),
       ),
     ),
-    Container(
-      child: const Center(
-        child: Text("Next next Page"),
-      ),
-    ),
-    Container(
-      child: const Center(
-        child: Text("Next next next Page"),
-      ),
-    ),
+    const CartHistory(),
+    const AccountPage(),
   ];
   void onTapNav(int index) {
     setState(() {
@@ -51,9 +45,7 @@ class _HomePageState extends State<HomePage> {
         onTap: onTapNav,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: "Home",
-          ),
+              icon: Icon(Icons.home_outlined), label: "Home"),
           BottomNavigationBarItem(
             icon: Icon(Icons.archive),
             label: "History",

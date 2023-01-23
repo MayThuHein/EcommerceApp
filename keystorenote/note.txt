@@ -1,0 +1,53 @@
+S D:\May\Develop\flutter\EcommerceApp> keytool -list -v -keystore "D:\May\Develop\flutter\EcommerceApp\keystore\fooddelivery.jks" -alias fooddelivery -storepass fooddelivery -keypass fooddelivery
+Alias name: fooddelivery
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 9D A7 6E B9 E9 FF FA 3F   2E 24 FD 9D 4F 4A C6 F6  ..n....?.$..OJ..
+0010: EC 93 86 A8                                        ....
+]
+]
+
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore D:\May\Develop\flutter\EcommerceApp\keystore\fooddelivery.jks -destkeystore D:\May\Develop\flutter\EcommerceApp\keystore\fooddelivery.jks -deststoretype pkcs12".
+
+
+
+PS D:\May\Develop\flutter\EcommerceApp> keytool -list -v -keystore "D:\May\Develop\flutter\EcommerceApp\keystore\fooddelivery.jks" -alias fooddelivery -storepass fooddelivery -keypass fooddelivery
+>> Alias name: fooddelivery
+Alias name: fooddelivery
+Creation date: Jan 12, 2023
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=fooddelivery, OU=fooddelivery, O=fooddelivery, L=fooddelivery, ST=fooddelivery, C=fooddelivery
+Issuer: CN=fooddelivery, OU=fooddelivery, O=fooddelivery, L=fooddelivery, ST=fooddelivery, C=fooddelivery
+Serial number: 6121dec0
+Valid from: Thu Jan 12 15:30:13 MMT 2023 until: Mon May 30 15:30:13 MMT 2050
+Certificate fingerprints:
+         SHA1: 39:7B:7E:07:79:90:B8:21:6E:2B:86:70:40:BE:72:A5:8A:93:93:76
+         SHA256: 10:11:7B:52:A7:26:1F:6F:D7:9B:08:9A:60:5B:8C:77:C2:F1:0A:51:CB:A4:85:54:FB:E4:EE:98:B4:EF:2A:F4
+Signature algorithm name: SHA256withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 9D A7 6E B9 E9 FF FA 3F   2E 24 FD 9D 4F 4A C6 F6  ..n....?.$..OJ..
+0010: EC 93 86 A8                                        ....
+]
+]
+
+
+Warning:
+The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore D:\May\Develop\flutter\EcommerceApp\keystore\fooddelivery.jks -destkeystore D:\May\Develop\flutter\EcommerceApp\keystore\fooddelivery.jks -deststoretype pkcs12".
+Get-Alias : A positional parameter cannot be found that accepts argument 'fooddelivery'.
+At line:2 char:1
++ Alias name: fooddelivery
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Alias], ParameterBindingException   
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.Ge  
+   tAliasCommand

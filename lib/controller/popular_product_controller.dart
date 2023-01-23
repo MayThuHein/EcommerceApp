@@ -1,6 +1,4 @@
-import 'dart:convert';
-
-import 'package:first_online_shopping_app/data/controller/cart_controller.dart';
+import 'package:first_online_shopping_app/controller/cart_controller.dart';
 import 'package:first_online_shopping_app/data/repository/popular_product_repo.dart';
 import 'package:first_online_shopping_app/model/products_model.dart';
 import 'package:first_online_shopping_app/utils/colors.dart';

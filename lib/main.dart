@@ -1,8 +1,10 @@
 import 'dart:io';
 
-import 'package:first_online_shopping_app/data/controller/cart_controller.dart';
-import 'package:first_online_shopping_app/data/controller/popular_product_controller.dart';
-import 'package:first_online_shopping_app/data/controller/recommended_product_controller.dart';
+import 'package:first_online_shopping_app/controller/cart_controller.dart';
+import 'package:first_online_shopping_app/controller/popular_product_controller.dart';
+import 'package:first_online_shopping_app/controller/recommended_product_controller.dart';
+import 'package:first_online_shopping_app/pages/auth/sign_in_page.dart';
+import 'package:first_online_shopping_app/pages/auth/sign_up_page.dart';
 import 'package:first_online_shopping_app/pages/home/main_food_page.dart';
 import 'package:first_online_shopping_app/pages/splash/splash_page.dart';
 import 'package:first_online_shopping_app/routes/route_helper.dart';
@@ -39,6 +41,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
+          // home: const SignInPage(),
           // home: const SplashScreen(),
           initialRoute: RouteHelper.getSplashPage(),
           getPages: RouteHelper.routes,
