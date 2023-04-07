@@ -10,7 +10,7 @@ import 'package:first_online_shopping_app/widgets/app_text_field.dart';
 import 'package:first_online_shopping_app/widgets/big_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+// import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../model/user_model.dart';
 import '../../widgets/app_icon.dart';
@@ -27,9 +27,9 @@ class _AddAddressPageState extends State<AddAddressPage> {
   final TextEditingController _contactPersonName = TextEditingController();
   final TextEditingController _contactPersonNumber = TextEditingController();
   late bool _isLogged;
-  CameraPosition _cameraPosition =
+/*   CameraPosition _cameraPosition =
       CameraPosition(target: LatLng(45.51563, -122.677433), zoom: 17);
-  late LatLng _initialPosition = LatLng(45.51563, -122.677433);
+  late LatLng _initialPosition = LatLng(45.51563, -122.677433); */
 
   @override
   void initState() {
@@ -48,7 +48,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
       }
 
       Get.find<LocationController>().getUserAddress();
-      _cameraPosition = CameraPosition(
+/*       _cameraPosition = CameraPosition(
           target: LatLng(
               double.parse(
                   Get.find<LocationController>().getAddress["latitude"]),
@@ -57,7 +57,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
 
       _initialPosition = LatLng(
           double.parse(Get.find<LocationController>().getAddress["latitude"]),
-          double.parse(Get.find<LocationController>().getAddress["longitude"]));
+          double.parse(Get.find<LocationController>().getAddress["longitude"])); */
     }
   }
 
@@ -80,11 +80,11 @@ class _AddAddressPageState extends State<AddAddressPage> {
         }
         return GetBuilder<LocationController>(
           builder: (locationController) {
-            _addressController.text =
-                '${locationController.placemark.name ?? ''}'
-                '${locationController.placemark.locality ?? ''}'
-                '${locationController.placemark.postalCode ?? ''}'
-                '${locationController.placemark.country ?? ''}';
+            // _addressController.text =
+            //     '${locationController.placemark.name ?? ''}'
+            //     '${locationController.placemark.locality ?? ''}'
+            //     '${locationController.placemark.postalCode ?? ''}'
+            //     '${locationController.placemark.country ?? ''}';
             return SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,7 +101,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                         border:
                             Border.all(width: 2, color: AppColors.mainColor)),
                     child: Stack(children: [
-                      GoogleMap(
+                      /*   GoogleMap(
                         initialCameraPosition: CameraPosition(
                           target: _initialPosition,
                           zoom: 17,
@@ -116,6 +116,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                         mapToolbarEnabled: false,
                         myLocationEnabled: true,
                         onCameraIdle: () {
+                          // camera (map) ကို ရွှေ့ဖို့သုံးတဲ့ propeties
                           locationController.updatePosition(
                               _cameraPosition, true);
                         },
@@ -124,7 +125,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
                         onMapCreated: (GoogleMapController controller) {
                           locationController.setMapController(controller);
                         },
-                      )
+                      ) */
                     ]),
                   ),
                   Padding(
@@ -222,7 +223,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
           },
         );
       }),
-      bottomNavigationBar:
+/*       bottomNavigationBar:
           GetBuilder<LocationController>(builder: (locationController) {
         return Column(
           mainAxisSize: MainAxisSize.min,
@@ -285,6 +286,7 @@ class _AddAddressPageState extends State<AddAddressPage> {
           ],
         );
       }),
+    */
     );
   }
 }

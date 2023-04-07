@@ -36,39 +36,27 @@ class AppTextField extends StatelessWidget {
         obscureText: isObscure ? true : false,
         controller: textController,
         decoration: InputDecoration(
-          //hintText,
-          hintText: hintText,
-          // prefixIcon
-          prefixIcon: Icon(
-            icon,
-            color: AppColors.yellowColor,
-          ),
-          // focusedBorder
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(Dimensions.radius15),
-            borderSide: const BorderSide(
-              width: 1.0,
-              color: Colors.white,
+            //hintText,
+            hintText: hintText,
+            // prefixIcon
+            prefixIcon: Icon(
+              icon,
+              color: AppColors.yellowColor,
             ),
-          ),
-          // endabledBorder
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(Dimensions.radius15),
-            borderSide: const BorderSide(
-              width: 1.0,
-              color: Colors.white,
+            // focusedBorder
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(Dimensions.radius15),
             ),
-          ),
+            // endabledBorder
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(Dimensions.radius15),
+            ),
 
-          // border
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(Dimensions.radius15),
-            borderSide: const BorderSide(
-              width: 1.0,
-              color: Colors.white,
+            // border
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(Dimensions.radius15),
             ),
-          ),
-        ),
+            contentPadding: const EdgeInsets.only(top: 5, bottom: 6)),
       ),
     );
   }

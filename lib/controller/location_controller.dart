@@ -2,23 +2,23 @@ import 'dart:convert';
 
 import 'package:first_online_shopping_app/data/repository/location_repo.dart';
 import 'package:first_online_shopping_app/model/response_model.dart';
-import 'package:geocoding/geocoding.dart';
-import 'package:geolocator/geolocator.dart';
+// import 'package:geocoding/geocoding.dart';
+// import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+// import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../model/address_model.dart';
 
 class LocationController extends GetxController implements GetxService {
   final LocationRepo locationRepo;
   LocationController({required this.locationRepo});
-  bool _loading = false;
+/*   bool _loading = false;
   late Position _position;
   late Position _pickPosition;
   Placemark _placemark = Placemark();
   Placemark get placemark => _placemark;
   Placemark _pickPlacemark = Placemark();
-  Placemark get pickPlacemark => _pickPlacemark;
+  Placemark get pickPlacemark => _pickPlacemark; */
   List<AddressModel> _addressList = [];
   List<AddressModel> get addressList => _addressList;
   late List<AddressModel> _allAddressList;
@@ -31,7 +31,7 @@ class LocationController extends GetxController implements GetxService {
   Map get getAddress => _getAddress;
 
   bool get loading => false;
-  Position get position => _position;
+/*   Position get position => _position;
   Position get pickPosition => _pickPosition;
 
   late GoogleMapController _mapController;
@@ -41,9 +41,9 @@ class LocationController extends GetxController implements GetxService {
 
   void setMapController(GoogleMapController mapController) {
     _mapController = mapController;
-  }
+  } */
 
-  void updatePosition(CameraPosition position, bool fromAddress) async {
+  /* void updatePosition(CameraPosition position, bool fromAddress) async {
     if (_updateAddressData) {
       _loading = true;
       update();
@@ -78,9 +78,9 @@ class LocationController extends GetxController implements GetxService {
         }
       } catch (e) {}
     }
-  }
+  } */
 
-  Future<String> getAddressfromGeoCode(LatLng latLng) async {
+/*   Future<String> getAddressfromGeoCode(LatLng latLng) async {
     String _address = "Unknown Location Found";
     Response response = await locationRepo.getAddressfromGeoCode(latLng);
     if (response.body["status"] == 200) {
@@ -91,7 +91,7 @@ class LocationController extends GetxController implements GetxService {
     }
     update();
     return _address;
-  }
+  } */
 
   AddressModel getUserAddress() {
     late AddressModel _addressModel;
@@ -113,7 +113,7 @@ class LocationController extends GetxController implements GetxService {
   }
 
   Future<ResponseModel> addAddress(AddressModel addressModel) async {
-    _loading = true;
+    // _loading = true;
     update();
     Response response = await locationRepo.addAddress(addressModel);
     ResponseModel responseModel;
